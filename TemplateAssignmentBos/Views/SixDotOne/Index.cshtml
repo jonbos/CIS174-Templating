@@ -1,0 +1,12 @@
+ @{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+@if (ViewBag.AccessLevel <= 2)
+{
+    <partial name="NoAccess"/>
+}
+@if (ViewBag.AccessLevel > 2)
+{
+    <partial name="StudentTable"/>
+}
